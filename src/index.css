@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #059669;
+  --secondary-color: #f8fafc;
+  --accent-color-1: #f97316;
+  --accent-color-2: #0284c7;
+  --background-color: #ffffff;
+  --text-color-primary: #1e293b;
+  --text-color-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .dashboard-card {
+    @apply bg-white rounded-xl border border-gray-200 p-6 transition-shadow duration-200 hover:shadow-card;
+  }
+
+  .dashboard-card-header {
+    @apply flex items-center justify-between mb-6;
+  }
+
+  .dashboard-card-title {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  .dashboard-card-subtitle {
+    @apply text-sm text-gray-500;
+  }
+
+  .stat-change {
+    @apply text-sm flex items-center gap-1;
+  }
+
+  .stat-change.up {
+    @apply text-emerald-600;
+  }
+
+  .stat-change.down {
+    @apply text-red-600;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
